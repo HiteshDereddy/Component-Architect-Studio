@@ -1,0 +1,27 @@
+node_modules/
+dist/
+.angular/
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+.env
+.env.local
+coverage/
+generated/
+*.log
+.DS_Store
+
+# Python/runtime artifacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local model weights and downloaded Hugging Face cache
+backend/models/
+backend/backend/models/
+backend/runtime/
+
+# Generated preview is intentionally mutable at runtime.
+# Keep the scaffold files in source control, but do not commit generated session output elsewhere.
+*.gguf

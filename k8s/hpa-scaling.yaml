@@ -1,0 +1,26 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: ml-worker-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: ml-worker
+  minReplicas: 1
+  maxReplicas: 20
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 75
+  # In a real-world scenario, you can scale on Redis queue length using KEDA
+  # - type: External
+  #   external:
+  #     metric:
+  #       name: redis_queue_length
+  #     target:
+  #       type: Value
+  #       value: "10"

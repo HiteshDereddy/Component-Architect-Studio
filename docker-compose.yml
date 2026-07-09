@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount the design system JSON from the root
+      - ./design-system.json:/app/design-system.json:ro
+      # Mount the models directory to avoid baking gigabytes into the image
+      - ./backend/models:/app/backend/models:ro
+    environment:
+      - PORT=8000
+    deploy:
+      resources:
+        reservations:
+          # Request GPU access if running on supported host (e.g. Nvidia/Metal)
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend

@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+:root {
+  --primary: #6366f1;
+  --secondary: #ec4899;
+  --background: #0f172a;
+  --surface: #1e293b;
+  --textPrimary: #f8fafc;
+  --textSecondary: #94a3b8;
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --radius: 8px;
+  --font-family: 'Inter', sans-serif;
+}
+
+.bg-glassmorphism {
+  background-color: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-headings {
+  font-family: var(--font-family);
+  color: var(--textPrimary);
+}
+
+.h1 { font-size: 2.25rem; font-weight: bold; }
+.h2 { font-size: 1.875rem; font-weight: bold; margin-bottom: 0.5rem; }
+.h3 { font-size: 1.5rem; font-weight: bold; }
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}

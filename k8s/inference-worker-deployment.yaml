@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: component-architect-inference-worker
+  labels:
+    app: inference-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: inference-worker
+  template:
+    metadata:
+      labels:
+        app: inference-worker
+    spec:
+      nodeSelector:
+        workload: ml-inference
+      containers:
+      - name: inference-worker
+        image: component-architect-backend:latest
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: GENERATION_PROVIDER
+          value: "llama"
+        - name: MODEL_PATH
+          value: "/app/backend/models/granite-4.1-3b-q4_k_m.gguf"
+        - name: DESIGN_SYSTEM_PATH
+          value: "/app/design-system.json"
+        - name: WORKER_ROLE
+          value: "inference"
+        - name: INFERENCE_QUEUE_URL
+          value: "redis://redis-queue-service:6379/0"
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "http://otel-collector-service:4318"
+        - name: OTEL_SERVICE_NAME
+          value: "component-architect-inference-worker"
+        - name: MODEL_WARM_POOL_SIZE
+          value: "1"
+        resources:
+          requests:
+            memory: "6Gi"
+            cpu: "2"
+            # Enable when GPU node pool is available:
+            # nvidia.com/gpu: 1
+          limits:
+            memory: "10Gi"
+            cpu: "4"
+            # nvidia.com/gpu: 1
+        volumeMounts:
+        - name: models-volume
+          mountPath: /app/backend/models
+          readOnly: true
+        - name: config-volume
+          mountPath: /app/design-system.json
+          subPath: design-system.json
+      volumes:
+      - name: models-volume
+        persistentVolumeClaim:
+          claimName: models-pvc
+      - name: config-volume
+        configMap:
+          name: design-system-config

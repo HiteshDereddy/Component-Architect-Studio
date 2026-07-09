@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "validators": {
+    "sainatha/prompt_injection_detector": {
+      "import_path": "sainatha_grhub_prompt_injection_detector",
+      "exports": [
+        "PromptInjectionDetector"
+      ],
+      "installed_at": "2026-07-09T12:21:03.747216+00:00",
+      "package_name": "sainatha-grhub-prompt-injection-detector"
+    },
+    "guardrails/profanity_free": {
+      "import_path": "guardrails_grhub_profanity_free",
+      "exports": [
+        "ProfanityFree"
+      ],
+      "installed_at": "2026-07-09T12:40:39.070833+00:00",
+      "package_name": "guardrails-grhub-profanity-free"
+    },
+    "guardrails/detect_pii": {
+      "import_path": "guardrails_grhub_detect_pii",
+      "exports": [
+        "DetectPII"
+      ],
+      "installed_at": "2026-07-09T13:30:23.248346+00:00",
+      "package_name": "guardrails-grhub-detect-pii"
+    },
+    "guardrails/secrets_present": {
+      "import_path": "guardrails_grhub_secrets_present",
+      "exports": [
+        "SecretsPresent"
+      ],
+      "installed_at": "2026-07-09T13:30:47.119272+00:00",
+      "package_name": "guardrails-grhub-secrets-present"
+    },
+    "guardrails/toxic_language": {
+      "import_path": "guardrails_grhub_toxic_language",
+      "exports": [
+        "ToxicLanguage"
+      ],
+      "installed_at": "2026-07-09T13:40:26.127921+00:00",
+      "package_name": "guardrails-grhub-toxic-language"
+    },
+    "guardrails/regex_match": {
+      "import_path": "guardrails_grhub_regex_match",
+      "exports": [
+        "RegexMatch"
+      ],
+      "installed_at": "2026-07-09T13:47:57.162198+00:00",
+      "package_name": "guardrails-grhub-regex-match"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+/* Layout */
+.feature-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  padding: var(--spacing-large);
+  background: var(--background);
+  min-height: 100vh;
+}
+
+/* Card styling with updated colors */
+.card {
+  background: var(--secondary);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-large);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+/* Visual elements */
+.card-title {
+  color: var(--textPrimary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 var(--spacing-small) 0;
+}
+
+.card-description {
+  color: var(--textSecondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CTA styling (not a button) */
+.cta-link {
+  background: var(--primary);
+  color: var(--background);
+  border: none;
+  padding: var(--spacing-small) var(--spacing-medium);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.cta-link:hover {
+  background: darken(var(--primary), 5%);
+}

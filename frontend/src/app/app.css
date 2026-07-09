@@ -1,0 +1,126 @@
+/* =============================================
+   THINKING PANEL — Gemini-style streaming CoT
+   ============================================= */
+
+.thinking-panel {
+  background: rgba(99, 102, 241, 0.04);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  transition: border-color 0.3s ease;
+}
+
+.thinking-panel:has(.thinking-body--open) {
+  border-color: rgba(99, 102, 241, 0.25);
+}
+
+.thinking-header {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  border-radius: 12px 12px 0 0;
+}
+
+.thinking-header:hover {
+  background: rgba(99, 102, 241, 0.06);
+}
+
+/* Pulsing live indicator dot */
+.thinking-dot-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.thinking-dot {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #818cf8;
+  animation: thinking-pulse 1.4s ease-in-out infinite;
+}
+
+.thinking-dot::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(129, 140, 248, 0.4);
+  animation: thinking-ring 1.4s ease-in-out infinite;
+}
+
+@keyframes thinking-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
+}
+
+@keyframes thinking-ring {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+.thinking-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #a5b4fc;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.thinking-chevron {
+  width: 13px;
+  height: 13px;
+  color: rgba(165, 180, 252, 0.5);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.thinking-chevron.expanded {
+  transform: rotate(180deg);
+}
+
+/* Smooth collapsible body */
+.thinking-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.thinking-body--open {
+  max-height: 280px;
+}
+
+.thinking-content {
+  overflow-y: auto;
+  max-height: 280px;
+  padding: 0 16px 14px;
+  /* Custom scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(99, 102, 241, 0.25) transparent;
+}
+
+.thinking-content::-webkit-scrollbar {
+  width: 4px;
+}
+.thinking-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.thinking-content::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.25);
+  border-radius: 2px;
+}
+
+.thinking-text {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11.5px;
+  line-height: 1.7;
+  color: rgba(148, 163, 184, 0.75);
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+  padding: 0;
+}

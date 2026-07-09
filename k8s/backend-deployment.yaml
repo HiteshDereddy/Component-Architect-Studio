@@ -1,0 +1,89 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: component-architect-backend
+  labels:
+    app: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: component-architect-backend:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+        env:
+        - name: GENERATION_PROVIDER
+          value: "llama"
+        - name: MODEL_PATH
+          value: "/app/backend/models/granite-4.1-3b-q4_k_m.gguf"
+        - name: DESIGN_SYSTEM_PATH
+          value: "/app/design-system.json"
+        - name: LLAMA_CONTEXT_SIZE
+          value: "4096"
+        - name: LLAMA_THREADS
+          value: "4"
+        - name: LLAMA_GPU_LAYERS
+          value: "0"
+        - name: CORS_ORIGINS
+          valueFrom:
+            configMapKeyRef:
+              name: backend-runtime-config
+              key: CORS_ORIGINS
+        - name: INFERENCE_QUEUE_URL
+          value: "redis://redis-queue-service:6379/0"
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "http://otel-collector-service:4318"
+        - name: OTEL_SERVICE_NAME
+          value: "component-architect-backend"
+        startupProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          failureThreshold: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          periodSeconds: 30
+          timeoutSeconds: 5
+          failureThreshold: 3
+        resources:
+          requests:
+            memory: "4Gi"
+            cpu: "2"
+            # Explicitly requesting GPU resources for ML scaling
+            # nvidia.com/gpu: 1 
+          limits:
+            memory: "8Gi"
+            cpu: "4"
+            # nvidia.com/gpu: 1
+        volumeMounts:
+        - name: models-volume
+          mountPath: /app/backend/models
+        - name: config-volume
+          mountPath: /app/design-system.json
+          subPath: design-system.json
+      volumes:
+      - name: models-volume
+        persistentVolumeClaim:
+          claimName: models-pvc
+      - name: config-volume
+        configMap:
+          name: design-system-config

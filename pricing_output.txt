@@ -1,0 +1,414 @@
+data: {"type": "chunk", "content": "```"}
+
+data: {"type": "chunk", "content": "typescript"}
+
+data: {"type": "chunk", "content": "\n"}
+
+data: {"type": "chunk", "content": "export"}
+
+data: {"type": "chunk", "content": " const"}
+
+data: {"type": "chunk", "content": " Pricing"}
+
+data: {"type": "chunk", "content": "Card"}
+
+data: {"type": "chunk", "content": "Component"}
+
+data: {"type": "chunk", "content": " ="}
+
+data: {"type": "chunk", "content": " ()"}
+
+data: {"type": "chunk", "content": " =>"}
+
+data: {"type": "chunk", "content": " {\n"}
+
+data: {"type": "chunk", "content": " "}
+
+data: {"type": "chunk", "content": " return"}
+
+data: {"type": "chunk", "content": " html"}
+
+data: {"type": "chunk", "content": "`\n"}
+
+data: {"type": "chunk", "content": "   "}
+
+data: {"type": "chunk", "content": " <"}
+
+data: {"type": "chunk", "content": "div"}
+
+data: {"type": "chunk", "content": " class"}
+
+data: {"type": "chunk", "content": "=\""}
+
+data: {"type": "chunk", "content": "bg"}
+
+data: {"type": "chunk", "content": "-"}
+
+data: {"type": "chunk", "content": "soft"}
+
+data: {"type": "chunk", "content": " bg"}
+
+data: {"type": "chunk", "content": "-gradient"}
+
+data: {"type": "chunk", "content": "-to"}
+
+data: {"type": "chunk", "content": "-r"}
+
+data: {"type": "chunk", "content": " var"}
+
+data: {"type": "chunk", "content": "(--"}
+
+data: {"type": "chunk", "content": "background"}
+
+data: {"type": "chunk", "content": ")"}
+
+data: {"type": "chunk", "content": " var"}
+
+data: {"type": "chunk", "content": "(--"}
+
+data: {"type": "chunk", "content": "surface"}
+
+data: {"type": "chunk", "content": ")"}
+
+data: {"type": "chunk", "content": " p"}
+
+data: {"type": "chunk", "content": "-"}
+
+data: {"type": "chunk", "content": "6"}
+
+data: {"type": "chunk", "content": " rounded"}
+
+data: {"type": "chunk", "content": "-lg"}
+
+data: {"type": "chunk", "content": " shadow"}
+
+data: {"type": "chunk", "content": "-lg"}
+
+data: {"type": "chunk", "content": " bg"}
+
+data: {"type": "chunk", "content": "-"}
+
+data: {"type": "chunk", "content": " glass"}
+
+data: {"type": "chunk", "content": "m"}
+
+data: {"type": "chunk", "content": "orphism"}
+
+data: {"type": "chunk", "content": "\">\n"}
+
+data: {"type": "chunk", "content": "     "}
+
+data: {"type": "chunk", "content": " <"}
+
+data: {"type": "chunk", "content": "div"}
+
+data: {"type": "chunk", "content": " class"}
+
+data: {"type": "chunk", "content": "=\""}
+
+data: {"type": "chunk", "content": "max"}
+
+data: {"type": "chunk", "content": "-w"}
+
+data: {"type": "chunk", "content": "-"}
+
+data: {"type": "chunk", "content": "2"}
+
+data: {"type": "chunk", "content": "xl"}
+
+data: {"type": "chunk", "content": " mx"}
+
+data: {"type": "chunk", "content": "-auto"}
+
+data: {"type": "chunk", "content": " space"}
+
+data: {"type": "chunk", "content": "-y"}
+
+data: {"type": "chunk", "content": "-"}
+
+data: {"type": "chunk", "content": "4"}
+
+data: {"type": "chunk", "content": "\">\n"}
+
+data: {"type": "chunk", "content": "       "}
+
+data: {"type": "chunk", "content": " <"}
+
+data: {"type": "chunk", "content": "h"}
+
+data: {"type": "chunk", "content": "2"}
+
+data: {"type": "chunk", "content": " class"}
+
+data: {"type": "chunk", "content": "=\""}
+
+data: {"type": "chunk", "content": "text"}
+
+data: {"type": "chunk", "content": "-"}
+
+data: {"type": "chunk", "content": "2"}
+
+data: {"type": "chunk", "content": "xl"}
+
+data: {"type": "chunk", "content": " font"}
+
+data: {"type": "chunk", "content": "-bold"}
+
+data: {"type": "chunk", "content": " text"}
+
+data: {"type": "chunk", "content": "-head"}
+
+data: {"type": "chunk", "content": "ings"}
+
+data: {"type": "chunk", "content": "\">"}
+
+data: {"type": "chunk", "content": "St"}
+
+data: {"type": "chunk", "content": "arter"}
+
+data: {"type": "chunk", "content": " Plan"}
+
+data: {"type": "chunk", "content": "</"}
+
+data: {"type": "chunk", "content": "h"}
+
+data: {"type": "chunk", "content": "2"}
+
+data: {"type": "chunk", "content": ">\n"}
+
+data: {"type": "chunk", "content": "       "}
+
+data: {"type": "chunk", "content": " <"}
+
+data: {"type": "chunk", "content": "div"}
+
+data: {"type": "chunk", "content": " class"}
+
+data: {"type": "chunk", "content": "=\""}
+
+data: {"type": "chunk", "content": "space"}
+
+data: {"type": "chunk", "content": "-y"}
+
+data: {"type": "chunk", "content": "-"}
+
+data: {"type": "chunk", "content": "2"}
+
+data: {"type": "chunk", "content": "\">\n"}
+
+data: {"type": "chunk", "content": "         "}
+
+data: {"type": "chunk", "content": " <"}
+
+data: {"type": "chunk", "content": "p"}
+
+data: {"type": "chunk", "content": " class"}
+
+data: {"type": "chunk", "content": "=\""}
+
+data: {"type": "chunk", "content": "text"}
+
+data: {"type": "chunk", "content": "-sm"}
+
+data: {"type": "chunk", "content": " text"}
+
+data: {"type": "chunk", "content": "-gray"}
+
+data: {"type": "chunk", "content": "-"}
+
+data: {"type": "chunk", "content": "600"}
+
+data: {"type": "chunk", "content": "\">$"}
+
+data: {"type": "chunk", "content": "29"}
+
+data: {"type": "chunk", "content": "/month"}
+
+data: {"type": "chunk", "content": "</"}
+
+data: {"type": "chunk", "content": "p"}
+
+data: {"type": "chunk", "content": ">\n"}
+
+data: {"type": "chunk", "content": "         "}
+
+data: {"type": "chunk", "content": " <"}
+
+data: {"type": "chunk", "content": "p"}
+
+data: {"type": "chunk", "content": " class"}
+
+data: {"type": "chunk", "content": "=\""}
+
+data: {"type": "chunk", "content": "text"}
+
+data: {"type": "chunk", "content": "-primary"}
+
+data: {"type": "chunk", "content": "\">"}
+
+data: {"type": "chunk", "content": "Limited"}
+
+data: {"type": "chunk", "content": " features"}
+
+data: {"type": "chunk", "content": ","}
+
+data: {"type": "chunk", "content": " up"}
+
+data: {"type": "chunk", "content": " to"}
+
+data: {"type": "chunk", "content": " "}
+
+data: {"type": "chunk", "content": "1"}
+
+data: {"type": "chunk", "content": "GB"}
+
+data: {"type": "chunk", "content": " storage"}
+
+data: {"type": "chunk", "content": "</"}
+
+data: {"type": "chunk", "content": "p"}
+
+data: {"type": "chunk", "content": ">\n"}
+
+data: {"type": "chunk", "content": "       "}
+
+data: {"type": "chunk", "content": " </"}
+
+data: {"type": "chunk", "content": "div"}
+
+data: {"type": "chunk", "content": ">\n"}
+
+data: {"type": "chunk", "content": "       "}
+
+data: {"type": "chunk", "content": " <"}
+
+data: {"type": "chunk", "content": "div"}
+
+data: {"type": "chunk", "content": " class"}
+
+data: {"type": "chunk", "content": "=\""}
+
+data: {"type": "chunk", "content": "flex"}
+
+data: {"type": "chunk", "content": " items"}
+
+data: {"type": "chunk", "content": "-center"}
+
+data: {"type": "chunk", "content": " justify"}
+
+data: {"type": "chunk", "content": "-between"}
+
+data: {"type": "chunk", "content": "\">\n"}
+
+data: {"type": "chunk", "content": "         "}
+
+data: {"type": "chunk", "content": " <"}
+
+data: {"type": "chunk", "content": "button"}
+
+data: {"type": "chunk", "content": " class"}
+
+data: {"type": "chunk", "content": "=\""}
+
+data: {"type": "chunk", "content": "btn"}
+
+data: {"type": "chunk", "content": " btn"}
+
+data: {"type": "chunk", "content": "-primary"}
+
+data: {"type": "chunk", "content": "\">"}
+
+data: {"type": "chunk", "content": "Get"}
+
+data: {"type": "chunk", "content": " Started"}
+
+data: {"type": "chunk", "content": "</"}
+
+data: {"type": "chunk", "content": "button"}
+
+data: {"type": "chunk", "content": ">\n"}
+
+data: {"type": "chunk", "content": "         "}
+
+data: {"type": "chunk", "content": " <"}
+
+data: {"type": "chunk", "content": "span"}
+
+data: {"type": "chunk", "content": " class"}
+
+data: {"type": "chunk", "content": "=\""}
+
+data: {"type": "chunk", "content": "badge"}
+
+data: {"type": "chunk", "content": " bg"}
+
+data: {"type": "chunk", "content": "-primary"}
+
+data: {"type": "chunk", "content": " text"}
+
+data: {"type": "chunk", "content": "-white"}
+
+data: {"type": "chunk", "content": " px"}
+
+data: {"type": "chunk", "content": "-"}
+
+data: {"type": "chunk", "content": "2"}
+
+data: {"type": "chunk", "content": " py"}
+
+data: {"type": "chunk", "content": "-"}
+
+data: {"type": "chunk", "content": "0"}
+
+data: {"type": "chunk", "content": "."}
+
+data: {"type": "chunk", "content": "5"}
+
+data: {"type": "chunk", "content": " rounded"}
+
+data: {"type": "chunk", "content": "\">"}
+
+data: {"type": "chunk", "content": "Recommended"}
+
+data: {"type": "chunk", "content": "</"}
+
+data: {"type": "chunk", "content": "span"}
+
+data: {"type": "chunk", "content": ">\n"}
+
+data: {"type": "chunk", "content": "       "}
+
+data: {"type": "chunk", "content": " </"}
+
+data: {"type": "chunk", "content": "div"}
+
+data: {"type": "chunk", "content": ">\n"}
+
+data: {"type": "chunk", "content": "     "}
+
+data: {"type": "chunk", "content": " </"}
+
+data: {"type": "chunk", "content": "div"}
+
+data: {"type": "chunk", "content": ">\n"}
+
+data: {"type": "chunk", "content": "   "}
+
+data: {"type": "chunk", "content": " </"}
+
+data: {"type": "chunk", "content": "div"}
+
+data: {"type": "chunk", "content": ">\n"}
+
+data: {"type": "chunk", "content": " "}
+
+data: {"type": "chunk", "content": " `;\n"}
+
+data: {"type": "chunk", "content": "};\n"}
+
+data: {"type": "chunk", "content": "```"}
+
+data: {"type": "chunk", "content": ""}
+
+data: {"type": "done", "code": "```typescript\nexport const PricingCardComponent = () => {\n  return html`\n    <div class=\"bg-soft bg-gradient-to-r var(--background) var(--surface) p-6 rounded-lg shadow-lg bg- glassmorphism\">\n      <div class=\"max-w-2xl mx-auto space-y-4\">\n        <h2 class=\"text-2xl font-bold text-headings\">Starter Plan</h2>\n        <div class=\"space-y-2\">\n          <p class=\"text-sm text-gray-600\">$29/month</p>\n          <p class=\"text-primary\">Limited features, up to 1GB storage</p>\n        </div>\n        <div class=\"flex items-center justify-between\">\n          <button class=\"btn btn-primary\">Get Started</button>\n          <span class=\"badge bg-primary text-white px-2 py-0.5 rounded\">Recommended</span>\n        </div>\n      </div>\n    </div>\n  `;\n};\n```"}
+

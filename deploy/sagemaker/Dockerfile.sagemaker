@@ -1,0 +1,17 @@
+FROM python:3.11-slim
+
+RUN pip install --no-cache-dir llama-cpp-python fastapi uvicorn
+
+WORKDIR /opt/ml/code
+
+COPY main.py generator.py system_prompt.py validator.py agent.py ./
+COPY ../design-system.json /opt/ml/code/design-system.json
+
+ENV MODEL_PATH=/opt/ml/model/granite-4.1-3b-q4_k_m.gguf
+ENV DESIGN_SYSTEM_PATH=/opt/ml/code/design-system.json
+ENV GENERATION_PROVIDER=llama
+ENV LLAMA_GPU_LAYERS=-1
+
+EXPOSE 8080
+
+ENTRYPOINT ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]

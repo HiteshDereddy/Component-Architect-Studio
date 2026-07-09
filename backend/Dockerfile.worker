@@ -1,0 +1,19 @@
+FROM python:3.12-slim
+
+WORKDIR /app
+
+# Install system dependencies required for llama-cpp-python and native compilation
+RUN apt-get update && apt-get install -y build-essential gcc python3-dev cmake && rm -rf /var/lib/apt/lists/*
+
+# Install python dependencies
+COPY requirements.txt .
+# Install llama-cpp-python with CUDA/GPU support (if deploying to GPU instances like SageMaker)
+# ENV CMAKE_ARGS="-DLLAMA_CUBLAS=on"
+# ENV FORCE_CMAKE=1
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the backend code and models
+COPY . .
+
+# Run the worker script directly (this runs the Redis listening loop)
+CMD ["python", "worker.py"]

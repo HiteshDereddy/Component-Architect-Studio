@@ -1,4 +1,4 @@
-# Guided Component Architect
+# Component Architect Studio
 
 An enterprise-grade, agentic code-generation platform that transforms natural language descriptions into valid, styled Angular components while strictly adhering to a predefined Design System. 
 

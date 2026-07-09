@@ -25,3 +25,10 @@ backend/runtime/
 # Generated preview is intentionally mutable at runtime.
 # Keep the scaffold files in source control, but do not commit generated session output elsewhere.
 *.gguf
+
+# Scratch files
+*.rtf
+*_output.txt
+backend/test*.py
+test_gen*.py
+backend/download_model.sh
